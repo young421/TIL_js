@@ -137,6 +137,6 @@ bgBtn[2].addEventListener('mouseover', bgChangeFunc('#2ff'))
 function bgChangeFunc(color){
     return function(){
         articleTag.style.backgroundColor = color;
-        bgP.tectContent = `현재 배경색상 : ${color}`
+        bgP.textContent = `현재 배경색상 : ${color}`
     }
 }
