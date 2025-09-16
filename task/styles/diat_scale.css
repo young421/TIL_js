@@ -1,0 +1,27 @@
+main {margin: 0 auto;}
+main #wrap { background-color: aquamarine;
+    text-align: center; 
+    background-image: url(../images/main_bg.jpg); background-repeat: no-repeat;
+    background-position: center;
+    display: flex; flex-flow: column nowrap; align-items: center;
+}
+main #wrap .contents {color: #fff;}
+main #wrap .contents h1 {
+    font-size: 3rem; font-weight: 700; padding-top: 50px; margin-bottom: 40px;
+}
+main #wrap .contents .weight_g {}
+main #wrap .contents .weight_g [id^=user] {
+    padding: 15px 80px; text-align: center; color: #aaa;
+    font-size: 0.875rem; margin: 20px 0;
+}/* input 공통 */
+main #wrap .contents .weight_g .current {}
+main #wrap .contents .weight_g .current > p {font-size: 1.125rem; font-weight: 600;}
+main #wrap .contents .weight_g .current > p > #user_weight {}
+main #wrap .contents .weight_g .normal {}
+main #wrap .contents .weight_g .normal > p {font-size: 1.125rem; font-weight: 600;}
+main #wrap .contents .weight_g .normal > p > #user_height {}
+main #wrap p {}
+main #wrap p .result_btn {
+    color: #3A6D2B; background-color: #fff;
+    padding: 10px 40px; border-radius: 40px; margin: 40px 0;
+}

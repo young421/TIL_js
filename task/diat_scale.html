@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이어트 체중계</title>
+    <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./styles/diat_scale_reset.css">
+    <link rel="stylesheet" href="./styles/diat_scale.css">
+    <script src="./script/diat_scale.js" defer></script>
+</head>
+<body>
+    <main>
+        <div id="wrap">
+            <div class="contents">
+                <h1>Diat Scale</h1>
+                <div class="weight_g">
+                    <div class="current">
+                        <p>현재 체중</p>
+                        <p><input type="text" name="user_weight" id="user_weight" placeholder="몸무게를 입력해 주세요"></p>
+                    </div>
+                    <div class="normal">
+                        <p>적정 체중</p>
+                        <p><input type="text" name="user_height" id="user_height" placeholder="키를 입력해 주세요"></p>
+                    </div>
+                </div>
+                <p><button type="submit" class="result_btn">GO!</button></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
