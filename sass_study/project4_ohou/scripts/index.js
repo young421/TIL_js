@@ -59,3 +59,5 @@ thumnailA[1].addEventListener('mouseover', ()=>{
 // true == 로그인
 // false == 로그아웃
 localStorage.setItem('isLogin', 'true');
+
+// 2. 😊저장하기 버튼 클릭 시 로그인 유무에 따라 다른 결과 실행
