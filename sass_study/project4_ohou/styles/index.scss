@@ -1,0 +1,138 @@
+@use './common.scss' as *;
+#wrap {letter-spacing:-0.2px;
+    header {
+        height: 52px; padding: 0 80px;
+        @include flex-row; gap: 16px;
+        border: 1px solid $color-gray-light-lv2;
+        border-left: 0; border-right: 0;
+        a {font-size: $font-size-m;}
+    }main {@include content-w;
+        .path {padding: 14px 0;
+            a {font-size: $font-size-xs; position: relative; padding-right: 12px;
+                &::after {
+                    @include after_before; content: '>'; right: 0; left: auto; top: 3px;
+                    font-size: $font-size-xs; color: $color-gray-medium;
+                }
+                &:last-child::after {display: none;}
+            }
+        }.container { @include flex-row; align-items: flex-start;
+            .overview_img {@include flex-row; align-items: flex-start; gap: 10px;
+                .thumnail {@include flex-col; gap: 8px;
+                    a {overflow: hidden; @include imgsmall; 
+                        img {@include img100Percent;}
+                    }
+                }
+            }.overview {@include imgbig;
+                img {@include img100Percent; border-radius: 5px;}
+            }
+            .contents {margin-left: 24px; width: 100%; position: relative;
+                > * {margin-bottom: 25px;}
+                svg {}
+                .brand {
+                    a {font-size: $font-size-xs;}
+                }.product_info {@include flex-row; 
+                    h1 {font-size: $font-size-l;}
+                    .right_icon {@include flex-row; position: absolute; right: 0; transform: translateY(7px);
+                        .scrap {@include flex-col; margin-right: 10px;
+                            .bookmark {@include icon21; stroke: $color-gray-dark; stroke-width: 1px;}
+                            span {}
+                        }.share {transform: translateY(-6px);
+                            .share_icon {@include icon24; stroke: $color-gray-dark; stroke-width: 1px;}
+                        }
+                    }
+                }.review {@include flex-row; gap: 5px;
+                    .score {
+                        .star {@include icon17; fill: $color-point;}
+                        .star1 {}
+                        .star2 {}
+                        .star3 {}
+                        .star4 {}
+                        .star5 {}
+                    }.number {font-size: 0.813rem; color: $color-point; font-weight: $font-weight;}
+                }.price_wrap {
+                    .sale_original_price {
+                        span .sale {}
+                        .original {color: $color-gray-medium;}
+                        .price_info {font-size: $font-size-xs;
+                            position: relative;
+                            .info_icon {@include icon16; stroke: $color-gray-light-lv1; stroke-width: 1px;}
+                            .info {
+                                width:330px; 
+                                position: absolute; left:50%; top:25px;
+                                transform:translateX(-50%); padding:10px;
+                                color:$color-gray-medium; font-size:$font-size-xs;
+                                background:$color-white; line-height:1.4;
+                                border-radius:5px; box-shadow:0 5px 7px rgba(0,0,0,0.15);
+                                display:none; /* 초기 숨기기 */
+                            }
+                        }
+                    }.total_price {font-size: $font-size-xl;
+                        .price {font-weight: $font-weight;}
+                        img {width: 61px; height: 15px;}
+                    }
+                }.benefit_ship {
+                    @include grid-6-2;
+                    grid-template-columns: 45px 1fr; gap: 10px;
+                    grid-template-areas:
+                        'title1 cont1'
+                        'title2 cont2'
+                        '. cont3'
+                        '. cont4'
+                        '. cont5'
+                        '. cont6';
+                    dt {
+                        &:nth-of-type(1) {grid-area: title1;}
+                        &:nth-of-type(2) {grid-area: title2;}
+                    }
+                    dd {
+                        em {font-weight: $font-weight;}
+                        &.ship_info {}
+                        &:nth-of-type(1) {grid-area: cont1;}
+                        &:nth-of-type(2) {grid-area: cont2;}
+                        &:nth-of-type(3) {grid-area: cont3;}
+                        &:nth-of-type(4) {grid-area: cont4;}
+                        &:nth-of-type(5) {grid-area: cont5;}
+                        &:nth-of-type(6) {grid-area: cont6;}
+                    }
+                }#orderFrm {
+                    .product_opt {@include flex-col;
+                        select {
+                            appearance: none;
+                            background-image: url(../images/arrow_back_2.png);
+                            background-repeat: no-repeat; background-size: 20px; background-position: right;
+                            @include selectbox; 
+                        }
+                        #color_select {border: 1px solid $color-point;}
+                        #size_select {border: 1px solid $color-gray-light-lv1; margin: 10px;}
+                    }.order_list {background-color: $color-gray-light-lv3; position: relative;
+                        padding: 20px 15px; margin-bottom: 25px;
+                        .info {margin-bottom: 20px; font-size: $font-size-xs;
+                            .color {}
+                            .size {}
+                        }.close {position: absolute; right: 15px; top: 17px;}
+                        .num_price {@include flex-row;
+                            .num {background-color: $color-white; border: 1px solid $color-gray-light-lv3;
+                                #minus {padding: 0 5px;}
+                                #order_num {width: 20px; text-align: center;}
+                                #plus_btn {padding: 0 5px;}
+                            }.price {position: absolute; right: 15px; bottom: 25px;
+                            font-weight: $font-weight;}  
+                        }
+                    }.order_price {@include flex-row; width: 100%; margin-bottom: 25px; position: relative;
+                        h2 {font-size: $font-size-xs;}
+                        .price {font-size: $font-size-s; font-weight: $font-weight;
+                            position: absolute; right: 10px;
+                            em {font-size: $font-size-m; font-weight: $font-weight;}
+                        }
+                    }.order_btn {@include flex-row; gap: 6px;
+                        button {flex:1; @include cart-buy-btn;}
+                        #cart_btn {background-color: $color-white; color: $color-point; 
+                            border: 1px solid $color-point;}
+                        #buy_btn {background-color: $color-point; color: $color-white; 
+                            border: 1px solid $color-white;}
+                    }
+                }
+            }
+        }
+    }footer {}
+}

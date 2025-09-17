@@ -1,0 +1,40 @@
+// common.scss
+$font-size-xl :2rem;
+$font-size-l :1.375rem;
+$font-size-m :1.25rem;
+$font-size-s :1.063rem;
+$font-size-xs :0.875rem;
+$font-weight :700;
+$color-point : #0aa5ff;
+$color-black : #000;
+$color-white : #fff;
+$color-gray-light-lv1 : #828c94;
+$color-gray-light-lv2 : #bdbdbd;
+$color-gray-light-lv3 : #dadce0;
+$color-gray-dark : #292929;
+$color-gray-medium : #757575;
+@mixin test-bg1 {background-color: lightblue;}
+@mixin test-bg2 {background-color: beige;}
+@mixin test-bg3 {background-color: lightpink;}
+@mixin content-w {max-width: 1156px; min-width: 320px; margin: 0 auto;}
+@mixin flex-row {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start; align-items: center;
+}
+@mixin flex-col {
+    display: flex; flex-flow: column nowrap;
+    justify-content: flex-start; align-items: center;
+}
+@mixin grid-6-2 {display: grid; 
+    grid-template-columns: repeat(2,1fr); grid-template-rows: repeat(6,1fr);
+}
+@mixin imgsmall {width: 56px; height: 56px; border-radius: 5px;}
+@mixin imgbig {width: 559px; height: 559px; border-radius: 5px;}
+@mixin img100Percent {width:100%; height:auto;}
+@mixin icon24 {width: 24px; height: 24px; display: inline-block;}
+@mixin icon16 {width: 16px; height: 16px; display: inline-block;}
+@mixin icon21 {width: 17px; height: 21px; display: inline-block;}
+@mixin icon17 {width: 17.12px; height: 16.35px; display: inline-block;}
+@mixin selectbox {width: 100%; padding:10px 17px; border-radius: 5px;}
+@mixin cart-buy-btn {width: 165.5px; line-height: 57px; border-radius: 5px; text-align: center;}
+@mixin after_before {content: ''; display: block; position: absolute; left: 0; top: 0;}
