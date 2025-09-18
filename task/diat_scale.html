@@ -13,19 +13,16 @@
 <body>
     <main>
         <div id="wrap">
-            <div class="contents">
-                <h1>Diat Scale</h1>
+            <!-- 배경아이콘 2개 -->
+            <div class="container">
+                <h1>Diet Scale</h1>
+                <p>I'm rooting for your diet <br>Let's enter height to find out the right weight for you</p>
                 <div class="weight_g">
-                    <div class="current">
-                        <p>현재 체중</p>
-                        <p><input type="text" name="user_weight" id="user_weight" placeholder="몸무게를 입력해 주세요"></p>
-                    </div>
-                    <div class="normal">
-                        <p>적정 체중</p>
-                        <p><input type="text" name="user_height" id="user_height" placeholder="키를 입력해 주세요"></p>
-                    </div>
+                    <input type="text" name="user_height" id="user_height" placeholder="Please enter a height">
+                    <input type="text" name="user_weight" id="user_weight" placeholder="Please enter your weight">
                 </div>
-                <p><button type="submit" class="result_btn">GO!</button></p>
+                <button type="button" id="result_btn">GO!</button>
+                <p id="result"></p>
             </div>
         </div>
     </main>
