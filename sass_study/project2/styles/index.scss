@@ -1,35 +1,51 @@
 // 1360x750
 // #ffffd4
 @use './common.scss' as *;
+
 main {
-    #slide_wrap {
+    .slide_wrap {
         @include pc_w_h;
-        position: relative;
-        background-color: $bg-color;
-        /* background-image: ; */
+        background-color:$bg-color;
+        position:relative;
         .slide_container {
-            .slide {}
-            .slide1 {background-image: url(../image/home_bg.png);
-                @include bg-cover; background-size: 800px; background-position: 120% center;
+            height:100%;
+            .slide {
+                height:100%;
                 .title_contents {
-                    h1 {font-size: 4.3rem; font-weight: 700; line-height: 1.4;}
-                    p {font-size: 3rem; font-weight: 600; margin-top: 20px;}
-                }.bnr_link {
-                    a {@include slide-btn; border: 1px solid #000;
-                        .education_link {background-color: #000;}
-                        .news_btn {}
+                    h1 {font-size:$font-title; font-weight:$weight-bold; line-height:1.3;}
+                    p {font-size:$font-sub; font-weight:$weight-medium; margin:20px 0 300px;}
+                }
+                .bnr_link {
+                    a {@include slide-btn; border:1px solid $btn-dark;}
+                    .education_btn {
+                        background-color: $btn-dark; color:$btn-light;
                     }
+                    .news_btn {}
                 }
             }
-        }.slide_page_btn {@include pst-ab; top: auto; bottom: 50px; left: 60px;
-            @include flex-row;
+            .slide1 {
+                background-image:url(../image/home_bg.png);
+                @include bg-cover;
+                background-size:800px auto;
+                background-position:120% center;
+            }
+            .slide2 {}
+            .slide3 {}
+        }
+        .slide_page_btn {
+            @include pst-ab; top:auto; bottom:50px; left:60px;
+            @include flex-row; gap:20px;
             .pagenation {
-                .current {}
-                .bar {}
-                .total {}
-            }.btn_g {
-                button.prev {}
-                button.next {}
+                @include flex-row; gap:10px;
+                span {}
+                .current {font-weight:$weight-semi;}
+                .bar {width:100px; height:2px; background-color:$btn-dark;}
+                .total {font-weight:$weight-medium;}
+            }
+            .btn_g {
+                button {background:none;}
+                #prev {margin-right:20px;}
+                #next {}
             }
         }
     }
