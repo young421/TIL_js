@@ -112,7 +112,7 @@
                         }.close {position: absolute; right: 15px; top: 17px;}
                         .num_price {@include flex-row;
                             .num {background-color: $color-white; border: 1px solid $color-gray-light-lv3;
-                                #minus {padding: 0 5px;}
+                                #minus_btn {padding: 0 5px;}
                                 #order_num {width: 20px; text-align: center;}
                                 #plus_btn {padding: 0 5px;}
                             }.price {position: absolute; right: 15px; bottom: 25px;
