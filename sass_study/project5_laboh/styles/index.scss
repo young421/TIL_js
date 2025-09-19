@@ -1,0 +1,52 @@
+@use './common.scss' as *;
+#wrap {
+    .container {@include flex-row; width: 1280px; margin: 0 auto; padding-top: 20px;
+        .overview_img { @include flex-row;
+            .thumnail {@include flex-col; gap: 10px; margin-right: 10px;
+                a {
+                    img {@include imgsmall;}
+                }
+            }
+        }.overview {
+            img {@include imgbig;}
+        }
+        .contents {@include test-bg2; width: 100%; position: relative; padding-left: 40px;
+            > * {margin-bottom: 20px; font-weight: $font-weight-m;}
+            .review {@include flex-row; font-size: 0.75rem;
+                .review_icon {fill: $color-point; @include icon14;  margin-right: 5px;}
+                .review_num { margin-right: 5px;}
+                .review_link {border-bottom: 1px solid #000;}
+            }h1 {font-size: $font-size-xl; line-height: 130%; font-weight: $font-weight;}
+            > p {font-size: $font-size-xs; color: $color-gray-dark; }
+            .price_info {
+                .price_sale {@include flex-row; margin-bottom: 10px; display: felx; align-items: center;
+                    h2 {color: $color-point; font-size: $font-size-xl; font-weight: $font-weight; margin-right: 10px;}
+                    del {font-size: $font-size-m;}
+                }.benefit {@include flex-row; margin-bottom: 10px;
+                    .benefit_price {font-size: $font-size-xs; 
+                        em {font-size: $font-size-l; color: $color-point-r; font-weight: $font-weight; margin-left: 10px;}
+                    }
+                }.free {font-size: $font-size-xs;}
+            }.order_info {@include flex-row; align-items: center;
+                border-top: 1px solid $color-gray-border; padding: 30px 0 10px;
+                > p {font-size: $font-size-xs; font-weight: $font-weight-m;}
+                .order_num_check {position: absolute; right:0; background-color: #fff; 
+                    #minus_btn {padding: 0 5px;}
+                    #order_num {width: 30px; text-align: center;}
+                    #plus_btn {padding: 0 5px;}
+                }
+            }.total_order {@include flex-row; position: relative; align-items: center;
+                border-top: 1px solid $color-gray-border; padding: 30px 0;
+                .total_price {font-size: $font-size-s; font-weight: $font-weight;
+                    span {font-size: $font-size-xs; position: absolute; right: 0;
+                        em {color: $color-point; font-size: $font-size-xl; font-weight: $font-weight;}
+                    }
+                }
+            }.btn_list {display: flex; justify-content: space-between;
+                #cart_btn {@include cart-buy-btn; background-color: #fff; color: $color-point; border: 1px solid $color-point;}
+                #buy_btn {@include cart-buy-btn; background-color: $color-point; color: #fff; border: 1px solid $color-point;}
+                #gift_btn {@include gift-btn; background-color: $color-point-r; color: #fff;}
+            }
+        }
+    }
+}

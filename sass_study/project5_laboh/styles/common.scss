@@ -1,0 +1,26 @@
+$font-size-xl : 1.875rem;
+$font-size-l : 1.25rem;
+$font-size-m : 1.125rem;
+$font-size-s : 1.063rem;
+$font-size-xs : 0.938rem;
+$font-size-xss : 0.875rem;
+$font-weight-m : 500;
+$font-weight : 700;
+$color-point : #008A48;
+$color-point-r :#E63D3D ;
+$color-gray-dark : #666;
+$color-gray :#999;
+$color-gray-border :#595959;
+$color-white : #fff;
+@mixin test-bg1 {background-color: pink;}
+@mixin test-bg2 {background-color: lightyellow;}
+@mixin test-bg3 {background-color: lightblue;}
+@mixin content-w {max-width: 1920px; min-width: 320px; margin: 0 auto;}
+@mixin flex-row {display: flex; flex-flow: row nowrap; justify-content: flex-start; }
+@mixin flex-col {display: flex; flex-flow: column nowrap; justify-content: flex-start; align-items: center;}
+@mixin imgsmall {width: 80px; height: 80px;}
+@mixin imgbig {width: 640px; height: 640px;}
+@mixin img100Percent {width:100%; height:auto;}
+@mixin icon14 {width: 14px; height: 14px; display: inline-block;}
+@mixin cart-buy-btn {width: 193px; line-height: 57px; text-align: center;}
+@mixin gift-btn {width: 53px; line-height: 57px; text-align: center; border: 1px solid #E63D3D;}

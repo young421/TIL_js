@@ -1,0 +1,182 @@
+#wrap .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  width: 1280px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+#wrap .container .overview_img {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+#wrap .container .overview_img .thumnail {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+#wrap .container .overview_img .thumnail a img {
+  width: 80px;
+  height: 80px;
+}
+#wrap .container .overview img {
+  width: 640px;
+  height: 640px;
+}
+#wrap .container .contents {
+  background-color: lightyellow;
+  width: 100%;
+  position: relative;
+  padding-left: 40px;
+}
+#wrap .container .contents > * {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+#wrap .container .contents .review {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  font-size: 0.75rem;
+}
+#wrap .container .contents .review .review_icon {
+  fill: #008A48;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 5px;
+}
+#wrap .container .contents .review .review_num {
+  margin-right: 5px;
+}
+#wrap .container .contents .review .review_link {
+  border-bottom: 1px solid #000;
+}
+#wrap .container .contents h1 {
+  font-size: 1.875rem;
+  line-height: 130%;
+  font-weight: 700;
+}
+#wrap .container .contents > p {
+  font-size: 0.938rem;
+  color: #666;
+}
+#wrap .container .contents .price_info .price_sale {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  display: felx;
+  align-items: center;
+}
+#wrap .container .contents .price_info .price_sale h2 {
+  color: #008A48;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+#wrap .container .contents .price_info .price_sale del {
+  font-size: 1.125rem;
+}
+#wrap .container .contents .price_info .benefit {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+#wrap .container .contents .price_info .benefit .benefit_price {
+  font-size: 0.938rem;
+}
+#wrap .container .contents .price_info .benefit .benefit_price em {
+  font-size: 1.25rem;
+  color: #E63D3D;
+  font-weight: 700;
+  margin-left: 10px;
+}
+#wrap .container .contents .price_info .free {
+  font-size: 0.938rem;
+}
+#wrap .container .contents .order_info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid #595959;
+  padding: 30px 0 10px;
+}
+#wrap .container .contents .order_info > p {
+  font-size: 0.938rem;
+  font-weight: 500;
+}
+#wrap .container .contents .order_info .order_num_check {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+}
+#wrap .container .contents .order_info .order_num_check #minus_btn {
+  padding: 0 5px;
+}
+#wrap .container .contents .order_info .order_num_check #order_num {
+  width: 30px;
+  text-align: center;
+}
+#wrap .container .contents .order_info .order_num_check #plus_btn {
+  padding: 0 5px;
+}
+#wrap .container .contents .total_order {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  align-items: center;
+  border-top: 1px solid #595959;
+  padding: 30px 0;
+}
+#wrap .container .contents .total_order .total_price {
+  font-size: 1.063rem;
+  font-weight: 700;
+}
+#wrap .container .contents .total_order .total_price span {
+  font-size: 0.938rem;
+  position: absolute;
+  right: 0;
+}
+#wrap .container .contents .total_order .total_price span em {
+  color: #008A48;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+#wrap .container .contents .btn_list {
+  display: flex;
+  justify-content: space-between;
+}
+#wrap .container .contents .btn_list #cart_btn {
+  width: 193px;
+  line-height: 57px;
+  text-align: center;
+  background-color: #fff;
+  color: #008A48;
+  border: 1px solid #008A48;
+}
+#wrap .container .contents .btn_list #buy_btn {
+  width: 193px;
+  line-height: 57px;
+  text-align: center;
+  background-color: #008A48;
+  color: #fff;
+  border: 1px solid #008A48;
+}
+#wrap .container .contents .btn_list #gift_btn {
+  width: 53px;
+  line-height: 57px;
+  text-align: center;
+  border: 1px solid #E63D3D;
+  background-color: #E63D3D;
+  color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */
