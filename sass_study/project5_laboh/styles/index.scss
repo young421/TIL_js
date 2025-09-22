@@ -1,6 +1,6 @@
 @use './common.scss' as *;
 #wrap {
-    .container {@include flex-row; width: 1280px; margin: 0 auto; padding-top: 20px;
+    .container {@include flex-row; width: 1280px; margin: 0 auto; padding-top: 20px; @include content-w;
         .overview_img { @include flex-row;
             .thumnail {@include flex-col; gap: 10px; margin-right: 10px;
                 a {
@@ -10,7 +10,7 @@
         }.overview {
             img {@include imgbig;}
         }
-        .contents {@include test-bg2; width: 100%; position: relative; padding-left: 40px;
+        .contents { width: 100%; position: relative;
             > * {margin-bottom: 20px; font-weight: $font-weight-m;}
             .review {@include flex-row; font-size: 0.75rem;
                 .review_icon {fill: $color-point; @include icon14;  margin-right: 5px;}
@@ -30,7 +30,7 @@
             }.order_info {@include flex-row; align-items: center;
                 border-top: 1px solid $color-gray-border; padding: 30px 0 10px;
                 > p {font-size: $font-size-xs; font-weight: $font-weight-m;}
-                .order_num_check {position: absolute; right:0; background-color: #fff; 
+                .order_num_check {position: absolute; right:0; background-color: #fff;
                     #minus_btn {padding: 0 5px;}
                     #order_num {width: 30px; text-align: center;}
                     #plus_btn {padding: 0 5px;}
@@ -38,7 +38,7 @@
             }.total_order {@include flex-row; position: relative; align-items: center;
                 border-top: 1px solid $color-gray-border; padding: 30px 0;
                 .total_price {font-size: $font-size-s; font-weight: $font-weight;
-                    span {font-size: $font-size-xs; position: absolute; right: 0;
+                    .order_price {font-size: $font-size-xs; position: absolute; right: 0;
                         em {color: $color-point; font-size: $font-size-xl; font-weight: $font-weight;}
                     }
                 }

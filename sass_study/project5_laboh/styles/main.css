@@ -5,6 +5,9 @@
   width: 1280px;
   margin: 0 auto;
   padding-top: 20px;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
 }
 #wrap .container .overview_img {
   display: flex;
@@ -28,10 +31,9 @@
   height: 640px;
 }
 #wrap .container .contents {
-  background-color: lightyellow;
   width: 100%;
   position: relative;
-  padding-left: 40px;
+  padding-left: 40px; padding-right: 40px;
 }
 #wrap .container .contents > * {
   margin-bottom: 20px;
@@ -57,7 +59,7 @@
   border-bottom: 1px solid #000;
 }
 #wrap .container .contents h1 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   line-height: 130%;
   font-weight: 700;
 }
@@ -80,7 +82,7 @@
   margin-right: 10px;
 }
 #wrap .container .contents .price_info .price_sale del {
-  font-size: 1.125rem;
+  font-size: 1.125rem; color: #999;
 }
 #wrap .container .contents .price_info .benefit {
   display: flex;
@@ -105,7 +107,7 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  border-top: 1px solid #595959;
+  border-top: 1px solid #999;
   padding: 30px 0 10px;
 }
 #wrap .container .contents .order_info > p {
@@ -116,6 +118,7 @@
   position: absolute;
   right: 0;
   background-color: #fff;
+  border: 1px solid #666; margin-right: 40px;
 }
 #wrap .container .contents .order_info .order_num_check #minus_btn {
   padding: 0 5px;
@@ -140,12 +143,12 @@
   font-size: 1.063rem;
   font-weight: 700;
 }
-#wrap .container .contents .total_order .total_price span {
+#wrap .container .contents .total_order .total_price .order_price {
   font-size: 0.938rem;
   position: absolute;
   right: 0;
 }
-#wrap .container .contents .total_order .total_price span em {
+#wrap .container .contents .total_order .total_price .order_price em {
   color: #008A48;
   font-size: 1.875rem;
   font-weight: 700;
@@ -157,7 +160,7 @@
 #wrap .container .contents .btn_list #cart_btn {
   width: 193px;
   line-height: 57px;
-  text-align: center;
+  text-align: center; 
   background-color: #fff;
   color: #008A48;
   border: 1px solid #008A48;
@@ -177,6 +180,8 @@
   border: 1px solid #E63D3D;
   background-color: #E63D3D;
   color: #fff;
+  background-image: url(https://laboh.co.kr/wvl/img/ico-pdp-gift-btn-white.svg); background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */

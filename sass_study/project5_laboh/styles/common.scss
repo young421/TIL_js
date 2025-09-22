@@ -1,4 +1,4 @@
-$font-size-xl : 1.875rem;
+$font-size-xl : 1.75rem;
 $font-size-l : 1.25rem;
 $font-size-m : 1.125rem;
 $font-size-s : 1.063rem;
@@ -12,6 +12,7 @@ $color-gray-dark : #666;
 $color-gray :#999;
 $color-gray-border :#595959;
 $color-white : #fff;
+@mixin content-w {margin: 0 auto; max-width: 1280px; min-width: 730px;}
 @mixin test-bg1 {background-color: pink;}
 @mixin test-bg2 {background-color: lightyellow;}
 @mixin test-bg3 {background-color: lightblue;}

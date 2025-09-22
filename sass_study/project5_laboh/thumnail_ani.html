@@ -26,7 +26,7 @@
             width:10px; height:10px; border-radius: 50%;
             background:#aaa;
         }
-        .box .pagenation span.active {background:#f00;}
+        .box .pagenation span.active {background:#f00; color:red;}
     </style>
 </head>
 <body>
@@ -49,13 +49,15 @@
     </div>
 
     <script>
-        const small = document.querySelector('.small a')
+        const small = document.querySelectorAll('.small a')
         const big = document.querySelector('.big')
-        const pagenation = document.querySelectorAll('.pagenaition span')
-        //big .children[0].offsetWidth
-        big.style.transition = 'transform 0.3s'
-        //두 번째 small 클릭 시 두번 째 big 애니메이션 옆으로 나타나기
-        small[1].addEventListener('click', ()=>{
+        const pagenation = document.querySelectorAll('.pagenation span')
+        //big.children[0].offsetWidth
+        //두번째 small 클릭 시 두번째 big 애니메이션 옆으로 나타나기
+
+        big.style.transition = 'transform 0.3s';
+
+        small[1].addEventListener('click',()=>{
             big.style.transform = `translateX(-${big.children[0].offsetWidth*1}px)`
             //요소에 클래스 적용/해제
             //요소.classList.add(); 요소.classList.remove();
