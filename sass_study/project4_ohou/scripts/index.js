@@ -280,6 +280,16 @@ buyBtn.addEventListener('click', ()=>{
         }else {location.href = './buy.html'}
     }
 })
-
+/* function cartBuyFunc(){
+    if(colorSelcet.selectedIndex == 0 || sizeSelcet.selectedIndex == 0){//상품 선택 안 한 걸로 확인하는 조건문
+        alert('옵션 선택 후에 버튼을 클릭해 주세요')
+    }else {
+        //장바구니 페이지 이동(로그인 유(장바구니) 무(로그인)에 따라)
+        loginStatus = localStorage.getItem('isLogin')
+        if(loginStatus == 'true'){
+            location.href = url
+        }else {location.href = './login.html'}
+    }
+} */ //반복 함수 설정
 
 // 12. 😊(상품 선택 시) 장바구니, 바로구매 클릭 시 로그인 유무에 따라 다른 페이지로 이동
