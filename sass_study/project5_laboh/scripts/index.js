@@ -42,7 +42,8 @@ const plusBtn = document.querySelector('#plus_btn')
 const orderNum = document.querySelector('#order_num')
 const orderPrice = document.querySelector('.order_price')
 const orderInput = document.querySelector('#order_num')
-console.log(minusBtn, plusBtn, orderNum, orderPrice, orderInput)
+const totalCount = document.querySelector('.total_count')
+console.log(minusBtn, plusBtn, orderNum, orderPrice, orderInput, totalCount)
 let num = 1; //초기주문수량
 
 //초기값 : 주문수량칸에 값 1 적용하기
@@ -65,12 +66,13 @@ minusBtn.addEventListener('click',()=>{
 function minusPlusFunc(){
     let total = num * 44900
     orderNum.value = num 
-    orderPrice.textContent = total.toLocaleString('ko-kr')
-} //되기는 하는데 적용한 글자 css 깨짐 + (개수 적용 x)
+    orderPrice.children[0].textContent = total.toLocaleString('ko-kr') + '원'
+    totalCount.children[0].textConten = `(${num}개)`
+} //옆에 괄호 적용 x
 
 // 5. 수량 input에 직접 작성해도 가능하게 만들기
-orderInput.addEventListener('text',()=>{
-    
+orderInput.addEventListener('keyup',(e)=>{
+    if(e.key === 'Enter'){}
 })
 
 //로그인 정보 저장

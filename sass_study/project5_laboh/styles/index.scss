@@ -39,7 +39,7 @@
                 border-top: 1px solid $color-gray-border; padding: 30px 0;
                 .total_price {font-size: $font-size-s; font-weight: $font-weight;
                     .order_price {font-size: $font-size-xs; position: absolute; right: 0;
-                        em {color: $color-point; font-size: $font-size-xl; font-weight: $font-weight;}
+                        .total_count {color: $color-point; font-size: $font-size-xl; font-weight: $font-weight;}
                     }
                 }
             }.btn_list {display: flex; justify-content: space-between;
