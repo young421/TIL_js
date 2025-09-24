@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탄생화와 꽃말</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <script src="./birthday.js" defer></script>
+    <style>
+        #wrap {margin: 0 auto; width: 600px;}
+        #wrap .container {background-color: lightcyan; border-radius: 10px;
+        display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;
+        gap: 40px; padding: 50px 0; margin-top: 30px;
+        }
+        #wrap .container .date_list {}
+        #wrap .container .date_list #date {
+            text-align: center; width: 80px; padding: 5px 0; 
+            margin-right: 5px; border-radius: 10px; border: 1px solid #fff;
+        }
+        #wrap .container .date_list span:nth-child(2) {margin: 0 20px;}
+        #wrap .container .date_list .user_year {}
+        #wrap .container .date_list .user_month {}
+        #wrap .container .date_list .user_day {}
+        #wrap .container #date_btn {
+            text-align: center; padding: 10px 50px; font-weight: 500;
+            border: 1px solid #fff; border-radius: 30px; background-color: white;
+        }
+        #wrap .container .birth_flower {
+            text-align: center; font-weight: 500; line-height: 150%; color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="date_list">
+                <span><input type="text" id="date" class="user_year">년</span>
+                <span><input type="text" id="date" class="user_month">월</span>
+                <span><input type="text" id="date" class="user_day">일</span>
+            </div>
+            <button type="submit" id="date_btn">당신의 탄생화와 꽃말은?</button>
+            <p class="birth_flower">12월의 탄생화는 포인세티아이고 <br>꽃말은 축하, 감사입니다.</p>
+        </div>
+    </div>
+</body>
+</html>
