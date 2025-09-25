@@ -4,42 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>탄생화와 꽃말</title>
-    <script src="./birthday.js" defer></script>
-    <style>
-        #wrap {margin: 0 auto; width: 600px;}
-        #wrap .container {background-color: lightblue; border-radius: 10px;
-        display: flex; flex-flow: column nowrap; justify-content: center; align-items: center;
-        gap: 40px; padding: 50px 0;
-        }
-        #wrap .container .date_list {}
-        #wrap .container .date_list #date {
-            text-align: center; width: 80px; padding: 5px 0; 
-            margin-right: 5px; border-radius: 10px; border: 1px solid #fff;
-        }
-        #wrap .container .date_list span:nth-child(2) {margin: 0 20px;}
-        #wrap .container .date_list #date .user_year {}
-        #wrap .container .date_list #date .user_month {}
-        #wrap .container .date_list #date .user_day {}
-        #wrap .container #date_btn {
-            text-align: center; padding: 10px 50px; font-weight: 500;
-            border: 1px solid #fff; border-radius: 30px; background-color: white;
-        }
-        #wrap .container .birth_flower {
-            text-align: center; font-weight: 500; line-height: 150%; color: blue;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- 제이쿼리 CDN 필수연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./scripts/db.js"></script>
+    <!-- <script src="./scripts/index.js" defer></script> -->
+    <script src="./scripts/index2.js" defer></script>
 </head>
 <body>
-    <div id="wrap">
-        <div class="container">
-            <div class="date_list">
-                <span><input type="text" id="date" class="user_year">년</span>
-                <span><input type="text" id="date" class="user_month">월</span>
-                <span><input type="text" id="date" class="user_day">일</span>
-            </div>
-            <button type="submit" id="date_btn">당신의 탄생화와 꽃말은?</button>
-            <p class="birth_flower">12월의 탄생화는 포인세티아이고 <br>꽃말은 축하, 감사입니다.</p>
+    <main>
+        <h1>The Flower of My Birth Day</h1>
+        <h2>나의 <em>탄생화</em>찾기</h2>
+        <div class="result_flower">
+            <h2>당신의 탄생화는 '<em></em>'입니다.</h2>
+            <p>꽃말 : <span></span></p>
         </div>
-    </div>
+        <form action="#" method="get" id="birthFrm">
+            <div class="input">
+                <input type="number" name="year" id="year">
+                <input type="number" name="month" id="month">
+                <input type="number" name="day" id="day">
+            </div>
+            <button type="button" id="result_btn">
+                나의 꽃과 꽃말 만나기
+            </button>
+            <button type="button" id="share_btn">
+                내 탄생화와 꽃말 공유하기
+            </button>
+        </form>
+        <div class="flower"><img src="https://i.pinimg.com/736x/50/30/5e/50305e5f6f94704532d1dff5140237a8.jpg" alt=""></div>
+    </main>
 </body>
 </html>
