@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>젠틀몬스터 | 가로스크롤트리거활용</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <!-- scrollTrigger CDN 필수 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        #wrap {/* overflow: hidden; */}
+        #wrap header {
+            text-align: center; height: 100vh;
+            background-image: url(./images/bnr_01.jpg);
+            background-size:cover;
+            position: relative;
+        }
+        #wrap header .logo {padding-top: 30px;}
+        #wrap header .logo a {}
+        #wrap header .logo a img {width: 350px;}
+        #wrap header p {position: absolute; left:0; bottom: 50px; color: #fff; font-weight: 500; line-height: 1.5;}
+        #wrap header button {border: 1px solid #fff; padding: 10px 15px; border-radius: 20px; color: #fff;}
+        #wrap header #buy_btn {}
+        #wrap header #look_btn {}
+        #wrap main {}
+        #wrap main .container {display: flex;}
+        #wrap main .container > img {width: 960px; height: 960px;}
+        #wrap main .container2 {display: flex; width: 1400px; position: relative;}
+        #wrap main .container2 > img {width: 500px;}
+        #wrap main .container2 .txt {
+            position: absolute; left: 20px; bottom: 20px;
+        }
+        #wrap main .container2 .txt h1 {
+            font-weight: 700; font-size: 1.875rem; margin-bottom: 5px;
+        }
+        #wrap main .container2 .txt p {font-weight: 500; line-height: 1.3}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo"><a href="#"><img src="./images/logo.png" alt=""></a></h1>
+            <p>볼드 컬렉션은 아이코닉한 디자인의 브릿지 디테일로<br> 과감한 연출이 가능한 아이웨어를 통해 독보적인 미학을 제시합니다.</p>
+            <button type="button" id="buy_btn">구매하기</button>
+            <button type="button" id="look_btn">캠페인 보기</button>
+        </header>
+        <main>
+            <div class="container">
+                <img src="./images/slide1.jpg" alt="">
+                <img src="./images/slide2.jpg" alt="">
+                <img src="./images/slide3.jpg" alt="">
+                <img src="./images/slide4.jpg" alt="">
+                <img src="./images/slide5.jpg" alt="">
+                <img src="./images/slide6.jpg" alt="">
+            </div>
+            <div class="container2">
+                <img src="./images/gentle_001.jpg" alt="">
+                <img src="./images/gentle_002.jpg" alt="">
+                <img src="./images/gentle_003.jpg" alt="">
+                <img src="./images/gentle_004.jpg" alt="">
+                <div class="txt">
+                    <h1>로코 01(R)</h1>
+                    <p>2025 볼드 컬렉션<br>템플에 더해진 시그니처 BOLD 심볼</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger) //scrollTrigger 필수
+
+        const container = document.querySelector('.container')
+        const scrollW = container.offsetWidth - window.innerWidth;
+        console.log(container.offsetWidth, scrollW)
+
+        gsap.utils.toArray('#wrap').forEach((obj) =>  {
+            console.log(obj)
+            const gentle = gsap.timeline({
+                scrollTrigger :{
+                    trigger: obj,
+                    start:'center center',
+                    end:()=> "+=" + scrollW,
+                    scrub:true,
+                    pin:true,
+                    anticipatePin:1,
+                }, defaults:{ease:'none'},
+            })
+            gentle.fromTo(obj.querySelector('.container'),{
+                x:0,
+            },{
+                x:-scrollW
+            })
+        })
+
+        //상세사진 가로스크롤
+        //글자 효과
+    </script>
+</body>
+</html>
